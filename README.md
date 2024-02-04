@@ -110,6 +110,9 @@ button.addEventListener('click', () => {
 
 ```
 
+## Ask Me Anything !
+
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
 
 ## 🙋‍♂️ Feel free to contact me
 e-mail: kamlew555@gmail.com
