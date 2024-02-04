@@ -1,12 +1,10 @@
 # Quote-Generator
-My challenge was to build out this newsletter form and get it looking as close to the design as possible from https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv. I tested my form validation skills, form submission and of course DOM manipulation.  
+This JavaScript Quote App is designed to display a random quote when a button is clicked. It consists of the main content area where quotes are displayed along with a button to generate a new quote.
 
 **Main features**:
-- Add email and submit the form;
-- See a success message with email after successfully submitting the form;
-- See form validation messages if:
-  The field is left empty
-  The email address is not formatted correctly
+- Random Quote Generation: The app generates a random quote from a predefined list when a button is clicked;
+-Dynamic Content Update: The content area dynamically updates to display the generated quote, and it includes a button to trigger the generation of a new quote.
+- Customization: Users can customize the app by modifying the quotes array or adjusting the structure of the HTML elements.
 
 
 ## 💡 Technologies
@@ -19,7 +17,7 @@ My challenge was to build out this newsletter form and get it looking as close t
 1. Clone the repository
 
 ```bash
-git clone https://github.com/Kamil201/Newsletter-sign-up-form-with-success-message.git
+git clone https://github.com/Kamil201/Quote-Generator.git
 ```
 
 2. Change the working directory
@@ -34,46 +32,80 @@ cd Quote-Generator
 npm install
 ```
  
-## 🤔 Solutions provided in the project
+## 🤔Solutions provided in the project 
 
-- I used email regex and saved it in a variable:
+- Init function that takes a containerSelector as a parameter. The purpose of this function is to initialize or set up a web application within a specified container on an HTML page.
 ```
- const emailRegex =
-	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ 
+const init = (containerSelector) => {
+    const container = document.querySelector(containerSelector);
+    
+	if (!container) return;
+    
+    const header = renderHeaderElement();
+	const app = render();
+
+	container.appendChild(header);
+	container.appendChild(app);
+};
+
+init(".quote");
+
 ```
 
  &nbsp;
 
-- Create a function which validate wheter the email is correct or not:
+- Random Quote Selection: A function to randomly select a quote from a predefined array of quotes. This allows for a dynamic and ever-changing quote display.
 
 ```
-const isValidEmail = (email) => {
-	return emailRegex.test(email);
+const getRandomQuote = () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
 };
+
 
 ```
  &nbsp;
  
-- Then create a function submitting the form:
+- User Interface Rendering Functions: Functions to render the header, quote content, and a button within a specified HTML container. These functions contribute to the structured layout of the application.
 
-const formSubmit = (e) => {
-	e.preventDefault();
-	const email = emailEl.value.trim();
+const renderHeaderElement = () => {
+    // ...
+};
 
-	if (isValidEmail(email)) {
-		errorMessage.style.visibility = "hidden";
-		confirmationEmailEl.innerText = email;
-		successPopupEl.style.display = "block";
-		newsletterEl.style.display = "none";
-	} else {
-		errorMessage.style.visibility = "visible";
-		newsletterFormEl.classList.add("error");
-		successPopupEl.style.display = "none";
-	}
+const renderQuoteText = () => {
+    // ...
+};
+
+const renderButtonElement = () => {
+    // ...
 };
 
 
  &nbsp;
+
+ -Application Initialization Function: An initialization function (init) that sets up the overall structure of the application by calling the rendering functions and appending the elements to a specified container.
+
+ ```
+const init = (containerSelector) => {
+    // ...
+};
+
+```
+
+ &nbsp;
+
+-Dynamic Quote Generation on Button Click: An event listener attached to a button that, when clicked, triggers the generation of a new random quote and updates the displayed content.
+
+```
+button.addEventListener('click', () => {
+    const pElement = document.querySelector('.quote__text');
+    const randomQuote = getRandomQuote();
+    pElement.innerHTML = `"${randomQuote.quote}" - ${randomQuote.author}`;
+});
+
+```
+
 
 -During the project I was struggling with the "newsletter" section does change its style after closing the popup on screens with a width less than 450 pixels. The logic that I implemented was to checks the screen width and adjusts the display style accordingly. 
 ```
