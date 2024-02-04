@@ -107,28 +107,6 @@ button.addEventListener('click', () => {
 ```
 
 
--During the project I was struggling with the "newsletter" section does change its style after closing the popup on screens with a width less than 450 pixels. The logic that I implemented was to checks the screen width and adjusts the display style accordingly. 
-```
-const closePopup = () => {
-    successPopupEl.style.display = "none"; // Hide the popup
-
-    if (window.innerWidth >= 450) {
-        newsletterEl.style.display = "flex"; // If wide screen, set the "newsletter" section to flex
-    } else {
-        newsletterEl.style.display = ""; // If narrow screen, remove the display style to revert to default behavior
-    }
-}
-
-window.addEventListener("resize", handleResize);
-```
- &nbsp;
-
-
-
-## 💭 Conclusions for future projects
-
-I would like to improve form submission with many diffrent form sumbission variants.
-
 ## 🙋‍♂️ Feel free to contact me
 e-mail: kamlew555@gmail.com
 
