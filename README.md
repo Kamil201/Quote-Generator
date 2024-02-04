@@ -116,5 +116,8 @@ button.addEventListener('click', () => {
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
 
 ## 🙋‍♂️ Feel free to contact me
+
+https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+
 e-mail: kamlew555@gmail.com
 
