@@ -117,7 +117,7 @@ button.addEventListener('click', () => {
 
 ## 🙋‍♂️ Feel free to contact me
 
-![image]({https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white})
+![image](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)
 
 e-mail: kamlew555@gmail.com
 
