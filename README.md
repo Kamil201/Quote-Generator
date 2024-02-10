@@ -33,15 +33,6 @@ cd Quote-Generator
 
 3. Open index.html file in your web browser:
 
-  ```bash
-    firefox index.html
-    ```
-
-or:
-
-    ```bash
-    google-chrome index.html
-    ```
  
 ## 🤔Solutions provided in the project 
 
