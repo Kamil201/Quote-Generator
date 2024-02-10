@@ -31,11 +31,17 @@ git clone https://github.com/Kamil201/Quote-Generator.git
 cd Quote-Generator
 ```
 
-3. Install dependencies
+3. Open index.html file in your web browser:
 
-```bash
-npm install
-```
+  ```bash
+    firefox index.html
+    ```
+
+or:
+
+    ```bash
+    google-chrome index.html
+    ```
  
 ## 🤔Solutions provided in the project 
 
