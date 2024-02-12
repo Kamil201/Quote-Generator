@@ -6,7 +6,7 @@ This JavaScript Quote App is designed to display a random quote when a button is
 
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 
-**Main features**:
+**🗃️ Main features**:
 - Random Quote Generation: The app generates a random quote from a predefined list when a button is clicked;
 -Dynamic Content Update: The content area dynamically updates to display the generated quote, and it includes a button to trigger the generation of a new quote.
 - Customization: Users can customize the app by modifying the quotes array or adjusting the structure of the HTML elements.
